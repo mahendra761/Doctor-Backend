@@ -68,7 +68,9 @@ connectDb();
 
 app.use(notFound);
 app.use(errorHandler);
-
+app.get("/",(req,res)=>{
+   res.json({message:"Backend is Deployed Successfully ",success:true,status_code:200})
+})
 app.listen("5000", () => {
   console.log("SERVER UP AND RUNNING".bold.cyan);
 });
